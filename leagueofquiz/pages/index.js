@@ -33,7 +33,7 @@ export default function Home() {
             <h1>League Of Legends</h1>
           </Widget.Header>
           <Widget.Content>
-            <p>lorem ipsum dolor sit amet...</p>
+            <p>Em breve disponivel</p>
           </Widget.Content>
 
         </Widget>
@@ -44,7 +44,7 @@ export default function Home() {
             <h1>Quizes da Galera</h1>
           </Widget.Header>
           <Widget.Content>
-            <p>lorem ipsum dolor sit amet...</p>
+            <p>Em breve disponivel</p>
           </Widget.Content>
         </Widget>
         <Footer />
