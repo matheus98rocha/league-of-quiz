@@ -3,25 +3,27 @@
     "title": "League Of Quiz",
     "description": "Teste seus conhecimentos sobre League Of Legends",
     "questions": [{
-            "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
-            "title": "Como fazer um seletor por id via CSS?",
+            "image": "https://media.tenor.com/images/ef66ba32bc3a26065b7b2ec3dbbe4899/tenor.gif",
+            "title": "Qual é o campeão Virtuoso?",
             "description": "Essa é pra aquecer",
-            "answer": 2,
+            "answer": 1,
             "alternatives": [
-                ".elemento",
-                "*elemento",
-                "#elemento",
-                "%elemento"
+                "Draven",
+                "Jhin",
+                "Azir",
+                "Leona"
             ]
         },
         {
-            "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
-            "title": "Como fazer um background gradiente com css?",
-            "description": "Faz tempo em haha",
-            "answer": 0,
+            "image": "https://media.tenor.com/images/0b48f113289c3f34a4d7b848167028a1/tenor.gif",
+            "title": "Quem tem uma ajudante que faz parte do banco?",
+            "description": "Essa ajuda,mas as vezes da raiva",
+            "answer": 2,
             "alternatives": [
-                "background: linear-gradient(#e66465, #9198e5);",
-                "background: gradient(#e66465, #9198e5);"
+                "Swain",
+                "Quinn",
+                "Lulu",
+                "Annie"
             ]
         }
     ],

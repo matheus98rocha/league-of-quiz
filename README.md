@@ -15,7 +15,18 @@ League of quiz
 ## Installing
 
 ```shell
+
+yarn add prop-types
+ou
+npm install prop-types
+
+yarn add eslint -D
+
 git clone https://github.com/matheus98rocha/imersao-react-alura
 
+yarn dev
+
 ```
+
+## Installing
 
