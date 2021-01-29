@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import React, { useEffect, useState } from 'react';
 // import next from 'next';
+import { PacmanLoader } from 'react-spinners';
 import db from '../db.json';
 import Widget from '../src/components/Widget';
 import QuizLogo from '../src/components/QuizLogo';
@@ -141,11 +142,11 @@ function LoadingWidget() {
   return (
     <Widget>
       <Widget.Content>
-        Carregando...
+        <PacmanLoader color="red" loading />
       </Widget.Content>
 
       <Widget.Content>
-        Desafio do Loading
+        Carregando...
       </Widget.Content>
     </Widget>
   );
@@ -175,7 +176,7 @@ export default function QuizPage() {
   useEffect(() => {
     setTimeout(() => {
       setScreenState(screenStates.QUIZ);
-    }, 1 * 1000);
+    }, 1 * 1500);
   }, []);
 
   function handleSubmitQuiz() {

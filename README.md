@@ -22,6 +22,8 @@ npm install prop-types
 
 yarn add eslint -D
 
+yarn add react-spinners
+
 git clone https://github.com/matheus98rocha/imersao-react-alura
 
 yarn dev
