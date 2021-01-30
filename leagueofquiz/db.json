@@ -25,10 +25,48 @@
                 "Lulu",
                 "Annie"
             ]
+        },
+        {
+            "image": "https://i.pinimg.com/originals/56/64/ca/5664cafb3ca903c46ee2a0aa5bc33bed.gif",
+            "title": "Em que ano aconteceu o ano novo chinês do lolzinho?",
+            "description": "Bons tempos...",
+            "answer": 3,
+            "alternatives": [
+                "1998",
+                "2021",
+                "2013",
+                "2019"
+            ]
+        },
+        {
+            "image": "https://thumbs.gfycat.com/CandidOptimisticGermanspaniel.webp",
+            "title": "O que o W do Azir fazia além de adicionar um novo soldado?",
+            "description": "O famoso pombo",
+            "answer": 0,
+            "alternatives": [
+                "Dava dano a mais em torres",
+                "Aumentava o dano do Q",
+                "Aumentava o atk speed dos soldados",
+                "Aumentava o tempo de duração dos soldados"
+            ]
+        },
+        {
+            "image": "https://media.tenor.com/images/e67460457cfd3ad01d6a50ce62b9e0ff/tenor.gif",
+            "title": "Qual dessas frases é da ovelha dos Kindred",
+            "description": "Minha frase favorita: Meu? - Ovelha: Nosso.",
+            "answer": 2,
+            "alternatives": [
+                "Tenho mais sede...",
+                "Pronto pra perseguir? Que pena.",
+                "Sua morte reflete sua vida",
+                "Isso vai doer MUITO."
+            ]
         }
     ],
     "external": [
-        ""
+        "https://aluraquiz-css.omariosouto.vercel.app/",
+        "https://aluraquiz-base.alura-challenges.vercel.app/",
+        "https://aluraquiz-devsoutinho.omariosouto.vercel.app/"
     ],
     "theme": {
         "colors": {

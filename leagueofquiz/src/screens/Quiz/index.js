@@ -2,13 +2,14 @@
 import React, { useEffect, useState } from 'react';
 // import next from 'next';
 import { SyncLoader } from 'react-spinners';
-import db from '../db.json';
-import Widget from '../src/components/Widget';
-import QuizLogo from '../src/components/QuizLogo';
-import QuizBackground from '../src/components/QuizBackground';
-import QuizContainer from '../src/components/QuizContainer';
-import Button from '../src/components/Button';
-import AlternativesForm from '../src/components/AlternativesForm/index';
+// import db from '../../../db.json';
+import Widget from '../../components/Widget';
+import QuizLogo from '../../components/QuizLogo';
+import QuizBackground from '../../components/QuizBackground';
+import QuizContainer from '../../components/QuizContainer';
+import Button from '../../components/Button';
+import AlternativesForm from '../../components/AlternativesForm/index';
+import BackLinkArrow from '../../components/BackLinkArrow/index';
 
 // Componente
 function QuestionWidget({
@@ -27,7 +28,7 @@ function QuestionWidget({
   return (
     <Widget>
       <Widget.Header>
-        {/* <BlackLinkArrow href="/" /> */}
+        <BackLinkArrow href="/" />
         <h3>
           {`Pergunta ${questionIndex + 1} de ${totalQuestions}`}
         </h3>
@@ -78,6 +79,7 @@ function QuestionWidget({
                   id={alternativeId}
                   type="radio"
                   name={questionId}
+                  checked={false}
                 />
                 {alternative}
 
@@ -141,13 +143,13 @@ function ResultWidget({ results }) {
 function LoadingWidget() {
   return (
     <Widget>
-      <Widget.Content>
+      <Widget.Loading>
         <SyncLoader color="red" loading />
-      </Widget.Content>
+      </Widget.Loading>
 
-      <Widget.Content>
+      <Widget.Loading>
         Carregando...
-      </Widget.Content>
+      </Widget.Loading>
     </Widget>
   );
 }
@@ -158,13 +160,14 @@ const screenStates = {
   RESULT: 'RESULT',
 };
 
-export default function QuizPage() {
+export default function QuizPage({ externalQuestions, externalBg }) {
   const [screenState, setScreenState] = useState(screenStates.LOADING);
   const [results, setResults] = useState([]);
-  const totalQuestions = db.questions.length;
+  const totalQuestions = externalQuestions.length;
   const [currentQuestion, setcurrentQuestion] = useState(0);
   const questionIndex = currentQuestion;
-  const question = db.questions[questionIndex];
+  const question = externalQuestions[questionIndex];
+  const bg = externalBg;
 
   function addResult(result) {
     setResults([
@@ -189,7 +192,7 @@ export default function QuizPage() {
   }
 
   return (
-    <QuizBackground backgroundImage={db.bg}>
+    <QuizBackground backgroundImage={bg}>
 
       <QuizContainer>
 

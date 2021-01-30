@@ -46,6 +46,23 @@ Widget.Content = styled.div`
   }
 `;
 
+Widget.Loading = styled.div`
+  padding: 35px 32px 32px 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  & > *:first-child {
+    margin-top: 0;
+  }
+  & > *:last-child {
+    margin-bottom: 0;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+`;
+
 Widget.Topic = styled.a`
   outline: 0;
   text-decoration: none;

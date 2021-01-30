@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 
+import { motion } from 'framer-motion';
 import db from '../db.json';
 import Widget from '../src/components/Widget/index';
 import Footer from '../src/components/Footer/index';
@@ -32,7 +33,16 @@ export default function Home() {
 
         <QuizLogo />
 
-        <Widget>
+        <Widget
+          transition={{ delay: 0, duration: 0.5 }}
+          as={motion.section}
+          variants={{
+            show: { opacity: 1, y: '0' },
+            hidden: { opacity: 0, y: '100%' },
+          }}
+          initial="hidden"
+          animate="show"
+        >
           <Widget.Header>
             <h1>League Of Legends</h1>
           </Widget.Header>
@@ -49,22 +59,53 @@ export default function Home() {
                 value={name}
               />
               <Button type="submit" disabled={name.length === 0}>
-                {`Jogar ${name}`}
+                {`Bem vindo a League of ${name}`}
               </Button>
             </form>
           </Widget.Content>
 
         </Widget>
 
-        <Widget>
-          <Widget.Header>
-            <h1>Quizes da Galera</h1>
-          </Widget.Header>
+        <Widget
+          transition={{ delay: 0.5, duration: 0.5 }}
+          as={motion.section}
+          variants={{
+            show: { opacity: 1 },
+            hidden: { opacity: 0 },
+          }}
+          initial="hidden"
+          animate="show"
+        >
           <Widget.Content>
-            <p>Em breve disponivel</p>
+            <h1>Quizes da Galera</h1>
+
+            <ul>
+              {db.external.map((linkExterno) => {
+                const [projectName, githubUser] = linkExterno
+                  .replace(/\//g, '')
+                  .replace('https:', '')
+                  .replace('.vercel.app', '').split('.');
+                return (
+                  <li>
+                    <Widget.Topic href={linkExterno} target="_blank">
+                      {`${projectName}/${githubUser}`}
+                    </Widget.Topic>
+                  </li>
+                );
+              })}
+            </ul>
           </Widget.Content>
         </Widget>
-        <Footer />
+        <Footer
+          transition={{ delay: 1, duration: 0.5 }}
+          as={motion.section}
+          variants={{
+            show: { opacity: 1 },
+            hidden: { opacity: 0 },
+          }}
+          initial="hidden"
+          animate="show"
+        />
       </QuizContainer>
       <GitHubCorner projectUrl="https://github.com/matheus98rocha" />
     </QuizBackground>
