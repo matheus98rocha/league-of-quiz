@@ -7,7 +7,7 @@
   Teste seus conhecimentos em League of legends
 </h4>
 
- <img src="/assets/leagueOfQuiz.gif">
+ <img src="/assets/leagueOfQuiz.gif" width="500px" height="500px">
 
  ## Deploy 📲
 O projeto foi hospedado na vercel, onde todos podem participar e tentar responder as peguntas
