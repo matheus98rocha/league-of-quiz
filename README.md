@@ -1,37 +1,24 @@
-<h2 align="center">
-League of quiz
-</h2>
+<header>
+    <h1>League Of Quiz</h1>
+</header>
+
 <h4 align="center">
   Material desenvolvido durate a semana de imersão React da Alura;<br>
   Teste seus conhecimentos em League of legends
 </h4>
 
+ <img src="assets/leagueOfQuiz" width="1000px" height="500px">
 
-## Installing
+ ## Deploy 📲
+O projeto foi hospedado na vercel, onde todos podem participar e tentar responder as peguntas
 
-```shell
-
-yarn add prop-types
-ou
-npm install prop-types
-
-yarn add eslint -D
-
-yarn add react-spinners
-
-yarn add framer-motion
-
-git clone https://github.com/matheus98rocha/imersao-react-alura
-
-cd leagueofquiz
-yarn dev
-
-```
+[Clique aqui](https://league-of-quiz.vercel.app/)
 
 ## Tecnologies
 
-Tecnologias:
 React.js;
-Next.js
-
-
+Next.js;
+Styled Components;
+Lambda Functions;
+Animações com Framer Motion;
+Padronização do código com Eslint;
